@@ -15,10 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from new_record import views
+from new_record import views as views_rec
+from register import views as views_reg
+from send_to_base import views as view_send
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('new/new_rec/', views.new_rec, name='home'),
-    path('view/', views.view, name='home'),
+    path('make_calendar/', view_send.make_cal, name='home'),
+    path('new/new_rec/', views_rec.new_rec, name='home'),
+    path('view/', views_rec.view, name='home'),
+    path('newview/', views_rec.newview, name='home'),
+    path('login/', views_reg.check_login, name='home'),
+    path('register/new_register/', views_reg.new_register, name='home'),
+    path('send_data/', view_send.send_data, name='home'),
 ]
