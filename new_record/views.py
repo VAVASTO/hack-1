@@ -16,7 +16,7 @@ def new_rec(request):
     myobj_str = str(json.dumps(marked_data))
     myobj_str_comb = "{\"data\":["  + str(myobj_str) 
     myobj_str_comb += "]}"
-    url = 'https://3517-195-19-42-150.eu.ngrok.io/api/user/addtask'
+    url = 'https://dde0-195-19-42-150.eu.ngrok.io/api/user/addtask'
     #url = 'http://localhost/make_calendar/'
    
     with open('log.txt', 'w') as log:
